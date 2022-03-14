@@ -1,0 +1,49 @@
+ID: [a-zA-Z_]+;
+INT: [0-9]+;
+DOUBLE: [1-9]'.'[0-9]*('e'[0-9]*)?;
+STRING: '"' ('\\"' | '\\\\' | .)*? '"' | '\'' ('\\"' | '\\\\' | .)*? '\'';
+TAU: '\\tau';
+AND: '\\and' | '\\AND' | '&&';
+OR: '\\or' | '\\OR' | '||';
+NOT: '\\not' | '\\NOT' | '!';
+EXISTS: '\\exists' | '\\EXISTS';
+IN: '\\in' | '\\IN';
+EQ: '\\eq' | '\\EQ' | '=';
+NEQ: '\\neq' | '\\NEQ' | '!=';
+GEQ: '\\geq' | '\\GEQ' | '>=';
+LEQ: '\\leq' | '\\LEQ' | '<=';
+GT: '>';
+LT: '<';
+
+<defination>::= "{" <values> "|" <range> "}"
+<body>      ::= <exp>
+<range>     ::= <exp>
+<exp>       ::= "(" <exp> ")"
+            |   NOT <exp>
+            |   <exp> AND <exp>
+            |   <exp> OR <exp>
+            |   "(" EXISTS <quancontent> ")"
+            |   TAU "(" ID ")" EQ <concept>
+            |   <otherexp>
+<values>    ::= <lvalue>
+            |   <lvalue> "," <values>
+<quancontent>::=<values> "|" <range> ":" <body>
+            |   <values> "|" ":" <body>
+<otherexp>  ::= <binExp>
+            |   <belongexp>
+<belongexp> ::= ID IN <concept>
+            |   ID IN <attr>
+            |   <pair> IN ID
+            |   <rvalue> IN <attr>
+<binExp>    ::= <lvalue> GT <rvalue>
+            |   <lvalue> LT <rvalue>
+            |   <lvalue> EQ <rvalue>
+            |   <lvalue> LEQ <rvalue>
+            |   <lvalue> GEQ <rvalue>
+            |   <lvalue> NEQ <rvalue>
+<attr>      ::= ID . ID
+<concept>   ::= ID ( ID )
+            |   ID
+<pair>      ::= ( ID, ID )
+<rvalue>    ::= DOUBLE | STRING | INT
+<lvalue>    ::= <attr> | ID
