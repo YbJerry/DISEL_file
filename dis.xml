@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ontology>
     <include>
-        <name>dis2</name>
-        <filePath>dis2.xml</filePath>
+        <name>OntologyExample</name>
+        <filePath>OntologyExample.xml</filePath>
     </include>
     <name>weather</name>
     <atomDomain>
@@ -79,43 +79,43 @@
         <name>Weather Graph</name>
         <rootedAt>weather</rootedAt>
         <edge>
-            <from DIS="dis2">Seasons</from>
+            <from DIS="OntologyExample">Seasons</from>
             <to>weather</to>
         </edge>
         <relation>
             <name>isA</name>
             <properties>transitive reflexive </properties>
             <edge>
-                <from DIS="dis2">Summer</from>
-                <to DIS="dis2">Seasons</to>
+                <from DIS="OntologyExample">Summer</from>
+                <to DIS="OntologyExample">Seasons</to>
             </edge>
             <edge>
-                <from DIS="dis2">Fall</from>
-                <to DIS="dis2">Seasons</to>
+                <from DIS="OntologyExample">Fall</from>
+                <to DIS="OntologyExample">Seasons</to>
             </edge>
             <edge>
-                <from DIS="dis2">Winter</from>
-                <to DIS="dis2">Seasons</to>
+                <from DIS="OntologyExample">Winter</from>
+                <to DIS="OntologyExample">Seasons</to>
             </edge>
             <edge>
-                <from DIS="dis2">Spring</from>
-                <to DIS="dis2">Seasons</to>
+                <from DIS="OntologyExample">Spring</from>
+                <to DIS="OntologyExample">Seasons</to>
             </edge>
             <edge>
-                <from DIS="dis2">Sunny Day</from>
-                <to DIS="dis2">Summer</to>
+                <from DIS="OntologyExample">Sunny Day</from>
+                <to DIS="OntologyExample">Summer</to>
             </edge>
             <edge>
-                <from DIS="dis2">Crisp Day</from>
-                <to DIS="dis2">Fall</to>
+                <from DIS="OntologyExample">Crisp Day</from>
+                <to DIS="OntologyExample">Fall</to>
             </edge>
             <edge>
-                <from DIS="dis2">Frigid Day</from>
-                <to DIS="dis2">Winter</to>
+                <from DIS="OntologyExample">Frigid Day</from>
+                <to DIS="OntologyExample">Winter</to>
             </edge>
             <edge>
-                <from DIS="dis2">Clear Day</from>
-                <to DIS="dis2">Spring</to>
+                <from DIS="OntologyExample">Clear Day</from>
+                <to DIS="OntologyExample">Spring</to>
             </edge>
         </relation>
     </graph>
