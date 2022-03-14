@@ -77,7 +77,7 @@
     </concept>
     <graph>
         <name>Weather Graph</name>
-        <rootedIn>weather</rootedIn>
+        <rootedAt>weather</rootedAt>
         <edge>
             <from DIS="dis2">Seasons</from>
             <to>weather</to>

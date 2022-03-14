@@ -38,7 +38,7 @@
     <xsd:complexType name="graphType">
         <xsd:sequence>
             <xsd:element name="name" type="xsd:string"></xsd:element>
-            <xsd:element name="rootedIn" type="xsd:string"></xsd:element>
+            <xsd:element name="rootedAt" type="xsd:string"></xsd:element>
             <xsd:element name="edge" type="edgeType" minOccurs="0" maxOccurs="unbounded"></xsd:element>
             <xsd:element name="relation" type="relationType" minOccurs="0" maxOccurs="unbounded"></xsd:element>
         </xsd:sequence>
