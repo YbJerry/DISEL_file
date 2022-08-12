@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ontology>
+    <name>OntologyExample</name>
+    <atomDomain>
+        <atom>
+            <name>Month</name>
+        </atom>
+        <atom>
+            <name>Day</name>
+        </atom>
+    </atomDomain>
+    <concept>
+        <name>Spring</name>
+        <latticeOfConcepts>
+            <atom>Month</atom>
+        </latticeOfConcepts>
+        <defination>
+            <![CDATA[
+            Month >= 3 \and Month <= 5
+            ]]>
+        </defination>
+    </concept>
+    <concept>
+        <name>Summer</name>
+        <latticeOfConcepts>
+            <atom>Month</atom>
+        </latticeOfConcepts>
+        <defination>
+            <![CDATA[
+            Month >= 6 \and Month <= 8
+            ]]>
+        </defination>
+    </concept>
+    <concept>
+        <name>Fall</name>
+        <latticeOfConcepts>
+            <atom>Month</atom>
+        </latticeOfConcepts>
+        <defination>
+            <![CDATA[
+            Month >= 9 \and Month <= 11
+            ]]>
+        </defination>
+    </concept>
+    <concept>
+        <name>Winter</name>
+        <latticeOfConcepts>
+            <atom>Month</atom>
+        </latticeOfConcepts>
+        <defination>
+            <![CDATA[
+            (Month >= 1 \and Month <= 2) \or Month == 12
+            ]]>
+        </defination>
+    </concept>
+    <concept>
+        <name>Clear Day</name>
+        <latticeOfConcepts>
+            <atom>Month</atom>
+            <atom>Day</atom>
+        </latticeOfConcepts>
+    </concept>
+    <concept>
+        <name>Sunny Day</name>
+        <latticeOfConcepts>
+            <atom>Month</atom>
+            <atom>Day</atom>
+        </latticeOfConcepts>
+    </concept>
+    <concept>
+        <name>Crisp Day</name>
+        <latticeOfConcepts>
+            <atom>Month</atom>
+            <atom>Day</atom>
+        </latticeOfConcepts>
+    </concept>
+    <concept>
+        <name>Frigid Day</name>
+        <latticeOfConcepts>
+            <atom>Month</atom>
+            <atom>Day</atom>
+        </latticeOfConcepts>
+    </concept>
+</ontology>
